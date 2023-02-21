@@ -73,6 +73,15 @@ Tech Stack:
 * [H2 Database](#) [Git](#)
 * [Java 8](#) [Docker](#)
 
+### Project run
+
+We can run two different ways:
+
+### with Docker
+
+1. docker run --name enoca-task -p 8080:8080 abbas1997/enoca
+2. this my image you can run : docker run --name enoca -p 8080:8080 abbas1997/enoca
+
 ### with Maven
 
 1. go to this github adress git clone https://github.com/AbbasSAFAROV/enoca-task
