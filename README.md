@@ -38,23 +38,18 @@ sağlayan standart bir yöntem ile sağlanmaktadır. Bu şekilde, tarayıcı ile
 
 4. Soru: Bir for döngüsü ile aşağıdaki çıktıyı yazar mısınız.
 
-Cevap 4: class HelloWorld {
+Cevap 4: 
+class HelloWorld {
 public static void main(String[] args) {
 
-        for(int i=0; i<5; i++){
-            for(int j=0; j<i; j++){
-                String str = "*";
-                if(j<2){
-                    System.out.print(str);
-                }else if(j>=2){
-                    System.out.print(str.repeat(2));    
-                }
-                
+        for (int i = 1; i < 11; i += 2) {
+            for (int j = 0; j < i; j++) {
+               System.out.print("*");
             }
             System.out.println();
-        }
-        
+         }
     }
+
 }
 
 5. Soru: Firmada çalışman için sana remote bir linux server verildi. Elinde ip adresi port bilgisi
