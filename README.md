@@ -107,4 +107,4 @@ We can run two different ways:
    sonraki verileri getir dediğimde solr a nasıl bir query yazılmalı. http://example?query=
    kısmını nasıl doldurmalıyım?
 
-Cevap 7: http://example?query=updatedAt:[2020-01-01T00:00:00Z TO NOW]
+Cevap 7: http://example?q=updatedAt:[2020-01-01T00:00:00Z TO *]&wt=json&indent=true
