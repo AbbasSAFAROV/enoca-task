@@ -3,38 +3,31 @@
 1. Soru : MVC kavramını açıklar mısınız ? Neden ihtiyaç duyuluyor. Java’da nasıl kurgulanıyor.
 Object Oriented katmanları nelerdir ?
 
-Cevap 1: MVC, 
-Model, View ve Controller kelimelerinin baş harflerinden oluşmaktadır.
-MVC deseni, 3 katmandan oluşmaktadır ve katmanları birbirinden bağımsız olarak çalışmaktadır. 
-Bu sebeple çoğunlukla büyük çaplı projelerde projelerin yönetiminin ve kontrolünün daha rahat sağlanabilmesi için tercih edilmektedir.
-Java da şu şekilde kurgulanabilir (entity - repository - service - controller).
+Cevap 1: 
 
-### OOP birçok özelliği vardır. Bunları 4 temel özellikte inceleyebiliriz.
+MVC mimarisi, uygulamanın farklı katmanlarını birbirinden bağımsız hale getirerek daha esnek ve yeniden kullanılabilir bir yapı oluşturmayı hedefler. Bu sayede, uygulamanın farklı katmanları kolaylıkla değiştirilebilir, güncellenebilir veya yeniden kullanılabilir.
 
-* [Soyutlama (Abstraction)](#)
-* [Kapsülleme (Encapsulation)](#)
-* [Miras Alma (Inheritance)](#)
-* [Çok Biçimlilik (Polymorphism)](#)
+Java'da MVC kurgusu, genellikle Spring Framework kullanılarak sağlanır. Spring MVC, uygulamanın farklı katmanlarını birbirinden ayırarak, model-view-controller mimarisini sağlar. Bu sayede, uygulama daha esnek ve yeniden kullanılabilir bir yapıya sahip olabilir.
 
+Object-oriented katmanlar ise, bir uygulamanın farklı parçalarını sınıflar ve nesneler şeklinde organize etmek için kullanılır. Bu katmanlar genellikle, veritabanı erişimi, kullanıcı arayüzü, iş mantığı ve diğer işlevler gibi farklı sorumlulukları temsil eden sınıflardan oluşur. 
+Object-oriented programlama, uygulamaların daha esnek, sürdürülebilir ve yeniden kullanılabilir olmasını sağlayan bir programlama paradigmadır.
 
 2. Soru : Birbirinden bağımsız iki platformun birbiriyle haberleşmesi nasıl sağlanabilir. Örneğin, X
 platformu Java ile yazılmış olsun, Y platform u C# ile. Bu iki platformun bir biri ile iletişim
 halinde request-response ilişkisi kurması gerekiyor. Bu yapıyı nasıl sağlarız.
 
-Cevap 2: API'nin açılımı olan Application Programming Interface,
-iki yazılım bileşeninin belirli tanımlar ve protokoller aracılığıyla 
-birbiriyle iletişim kurmasına olanak tanıyan mekanizmalardır.
-İlişkili API belgeleri, geliştiricilerin bu istek ve yanıtları 
-nasıl yapılandırması gerektiğine dair bilgiler içerir. (JSON veya XML)
+Cevap 2: Web servisleri, RESTful API veya SOAP API gibi iki ana tipte olabilir. RESTful API, basit HTTP protokolü üzerinden veri aktarımı sağlayan bir web servisi türüdür. SOAP API ise XML tabanlı bir protokol kullanarak veri aktarımı sağlar.
+
+Java ile yazılmış bir uygulama RESTful API veya SOAP API kullanarak veri paylaşımı sağlayabilir. C# ile yazılmış bir uygulama da aynı şekilde RESTful API veya SOAP API kullanarak veri paylaşımı sağlayabilir. Bu sayede, iki farklı platform arasında veri paylaşımı ve iletişim kurulabilir.
 
 3. Soru : Bir web sayfasında ekran sürekli Backend’ den veya bir başka yapı tarafından
 güncelleniyor. Siz, web sayfasını refresh etmeden bu güncel bilgiyi anlık ekrana nasıl yansıtırsınız.
 
-Cevap 2: Soket bilgisayarlar arası veri haberleşmesinde kullanılır.
+Cevap 3: Soket bilgisayarlar arası veri haberleşmesinde kullanılır.
 
-WebSocket protokolü, sunucuya ve sunucudan gerçek zamanlı veri aktarımını sağlayarak, tarayıcı ile web sunucusu arasında etkileşimi sağlamaktadır. 
-Bu, sunucunun istemci istemeden tarayıcıya içerik gönderebileceği ve bağlantıyı açık tutarak istediği zaman mesaj alabilmesini veya gönderebilmesini 
-sağlayan standart bir yöntem ile sağlanmaktadır. Bu şekilde, tarayıcı ile sunucu arasında iki yönlü devam eden bir iletişim gerçekleşebilmektedir.
+Java ile bir web uygulaması oluşturabilir ve web sayfasında anlık olarak güncellenen bilgiyi göstermek için WebSocket teknolojisini kullanabilirsiniz. WebSocket, iki yönlü bir iletişim kanalı sağlayarak sunucu ve istemci arasında gerçek zamanlı veri alışverişi yapılmasını sağlar.
+
+Örneğin, bir haber sitesinde anlık olarak yeni haberlerin eklendiği bir sayfada, sunucudan gönderilen verileri WebSocket ile alabilir ve anlık olarak sayfada gösterebilirsiniz.
 
 4. Soru: Bir for döngüsü ile aşağıdaki çıktıyı yazar mısınız.
 
@@ -59,6 +52,18 @@ public static void main(String[] args) {
 Cevap 5 : SSH, Secure Shell protokolünün kısaltmasıdır. Bir bilgisayar ile uzak bir bilgisayar arasında güvenli bir bağlantı kurulum yapılmasını sağlayan bir ağ protokolüdür. 
 SSH protokolü ile birlikte bir kişi, bağlanacağı uzak sunucuya erişim sağlaması durumunda sunucu için de istediği şekilde yönetimi sağlayabilir.
 SSH protokolü ile sunucuya bağlanmanız durumunda sunucu içerisindeki tüm dosya, uygulama gibi sunucunun tamamında bir yönetime sahip olursunuz.
+
+Sunucuya dosya yüklemek için, "scp" komutunu kullanabilirsiniz. Örneğin, 
+yerel bilgisayarınızdaki "ornek.txt" dosyasını sunucunun "/home/kullaniciadi/" 
+dizinine yüklemek için aşağıdaki komutu kullanabilirsiniz:
+
+scp ornek.txt kullaniciadi@ipadresi:/home/kullaniciadi/
+Sunucudan dosya indirmek için de "scp" komutunu kullanabilirsiniz. Örneğin, 
+sunucunun "/home/kullaniciadi/ornek.txt" dosyasını yerel bilgisayarınızdaki "/Users/kullaniciadi/" 
+dizinine indirmek için aşağıdaki komutu kullanabilirsiniz:
+
+scp kullaniciadi@ipadresi:/home/kullaniciadi/ornek.txt /Users/kullaniciadi/
+
 
 6. Soru : Java spring uygulaması ile CRUD webservisi geliştirilmesi.
 
