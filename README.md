@@ -132,4 +132,4 @@ docker run --name enoca -p 8080:8080 abbas1997/enoca
 
 **Cevap**
 
-http://example?q=updatedAt:[2020-01-01T00:00:00Z TO *]&wt=json&indent=true
+`http://example?q=updatedAt:[2020-01-01T00:00:00Z TO *]&wt=json&indent=true`
