@@ -41,12 +41,19 @@ Soket bilgisayarlar arası veri haberleşmesinde kullanılır. Java ile bir web 
 class HelloWorld {
 public static void main(String[] args) {
 
-        for (int i = 1; i < 11; i += 2) {
-            for (int j = 0; j < i; j++) {
-               System.out.print("*");
+        for(int i=0; i<5; i++){
+            for(int j=0; j<i; j++){
+                String str = "*";
+                if(j<2){
+                    System.out.print(str);
+                }else if(j>=2){
+                    System.out.print(str.repeat(2));    
+                }
+
             }
             System.out.println();
-         }
+        }
+        
     }
 
 }
